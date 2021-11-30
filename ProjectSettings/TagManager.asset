@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Object
   - ClimbingAdapter
+  - Coin
+  - wall
+  - GrabUpPoint
   layers:
   - Default
   - TransparentFX
