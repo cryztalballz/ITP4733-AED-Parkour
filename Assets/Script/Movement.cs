@@ -14,28 +14,29 @@ public class Movement : MonoBehaviour
     [SerializeField]int speed;
     void Update()
     {
+        float posY = player.transform.position.y;
         if (frontType.GetState(type))
         {
             Vector3 verticalZero = player.transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
-            verticalZero.y = 0;
+            verticalZero.y = posY;
             player.transform.position = verticalZero;
         }
         if (leftType.GetState(type))
         {
             Vector3 verticalZero = player.transform.position + Camera.main.transform.right * -speed * Time.deltaTime;
-            verticalZero.y = 0;
+            verticalZero.y = posY;
             player.transform.position = verticalZero;
         }
         if (rightType.GetState(type))
         {
             Vector3 verticalZero = player.transform.position + Camera.main.transform.right * speed * Time.deltaTime;
-            verticalZero.y = 0;
+            verticalZero.y = posY;
             player.transform.position = verticalZero;
         }
         if (backType.GetState(type))
         {
             Vector3 verticalZero = player.transform.position + Camera.main.transform.forward * -speed * Time.deltaTime;
-            verticalZero.y = 0;
+            verticalZero.y = posY;
             player.transform.position = verticalZero;
         }
     }
