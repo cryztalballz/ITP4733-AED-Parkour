@@ -20,6 +20,7 @@ public class AED_Button_Effect : MonoBehaviour
     GameObject StartPointer;
     public GameObject ShockPointer;
     public GameObject ShockEffect;
+    public ParticleSystem shock;
     public GameObject cross1;
     public GameObject cross2;
     public GameObject cross3;
@@ -49,6 +50,7 @@ public class AED_Button_Effect : MonoBehaviour
         cross5 = GameObject.Find("AED_Menu/step5/cross5");
         cross5.gameObject.SetActive(false);
         //Player = GameObject.FindGameObjectWithTag("player");
+        shock = ShockEffect.gameObject.GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -111,6 +113,7 @@ public class AED_Button_Effect : MonoBehaviour
         ShockPointer.gameObject.SetActive(false);
 
         ShockEffect.gameObject.SetActive(true);
+        shock.Play();
         AEDround++;
 
         if (AEDround==2) {
