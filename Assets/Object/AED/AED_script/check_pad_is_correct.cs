@@ -16,13 +16,15 @@ public class check_pad_is_correct : MonoBehaviour
     {
         if (other.transform.name == objName)
         {
-            Debug.Log("I found PAD1");
-            other.transform.position = new Vector3(correctPosition.position.x, correctPosition.position.y, correctPosition.position.z);
-            other.transform.rotation = new Quaternion(correctPosition.rotation.x, correctPosition.rotation.y, correctPosition.rotation.z, correctPosition.rotation.w);
-            other.GetComponent<Rigidbody>().isKinematic = true;
-            Debug.Log("PAD1 is ok");
-            PADNumber++;
-            Debug.Log("PADNumber = " + PADNumber);
+            if (!other.GetComponent<Rigidbody>().isKinematic) {
+                Debug.Log("I found PAD1");
+                other.transform.position = new Vector3(correctPosition.position.x, correctPosition.position.y, correctPosition.position.z);
+                other.transform.rotation = new Quaternion(correctPosition.rotation.x, correctPosition.rotation.y, correctPosition.rotation.z, correctPosition.rotation.w);
+                other.GetComponent<Rigidbody>().isKinematic = true;
+                Debug.Log("PAD1 is ok");
+                PADNumber++;
+                Debug.Log("PADNumber = " + PADNumber);
+            }
         }
 
 

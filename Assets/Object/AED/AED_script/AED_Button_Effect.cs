@@ -63,14 +63,14 @@ public class AED_Button_Effect : MonoBehaviour
         }
 
         //if the player stick 2 pad, show the next audio and show thw stock button
-        if (check_pad_is_correct.PADNumber == 4 && !readyToStock)
+        if (check_pad_is_correct.PADNumber == 2 && !readyToStock)
         {
             readyToStock = true;
         }
-        else if (check_pad_is_correct.PADNumber == 4 && readyToStock)
+        else if (check_pad_is_correct.PADNumber == 2 && readyToStock)
         {
             afterStickThePAD();
-            check_pad_is_correct.PADNumber = 5;
+            check_pad_is_correct.PADNumber = 3;
         }
         
 
