@@ -1317,6 +1317,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5565227271703609252, guid: ccc0dcb672c766947a58500a0d54ee11,
+        type: 3}
+      propertyPath: snapAttachEaseInCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565227271703609253, guid: ccc0dcb672c766947a58500a0d54ee11,
+        type: 3}
+      propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetStockedOn
+      objectReference: {fileID: 0}
     - target: {fileID: 5565227271703609259, guid: ccc0dcb672c766947a58500a0d54ee11,
         type: 3}
       propertyPath: cross1
@@ -12260,17 +12270,17 @@ PrefabInstance:
     - target: {fileID: 8946331910869707703, guid: c26e412f19361294494f210dbbf679f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.6830015
+      value: 3.284
       objectReference: {fileID: 0}
     - target: {fileID: 8946331910869707703, guid: c26e412f19361294494f210dbbf679f2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.142
+      value: 0.866
       objectReference: {fileID: 0}
     - target: {fileID: 8946331910869707703, guid: c26e412f19361294494f210dbbf679f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.305
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 8946331910869707703, guid: c26e412f19361294494f210dbbf679f2,
         type: 3}

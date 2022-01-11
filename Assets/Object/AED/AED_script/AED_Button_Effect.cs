@@ -75,12 +75,12 @@ public class AED_Button_Effect : MonoBehaviour
         
 
         //if the stock is done, call the next audio
-        if (stocked && turnedOn==1) {
+        if (stocked && readyToStock) {
             afterStock();
-            turnedOn++;
+            stocked = false;
         }
     }
-
+    public void SetStockedOn() { stocked = readyToStock ? true : false; }
     public void turnOnAED()
     {
         if (!turnOn) {

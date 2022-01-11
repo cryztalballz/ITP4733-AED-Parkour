@@ -21,6 +21,7 @@ public class check_pad_is_correct : MonoBehaviour
                 other.transform.position = new Vector3(correctPosition.position.x, correctPosition.position.y, correctPosition.position.z);
                 other.transform.rotation = new Quaternion(correctPosition.rotation.x, correctPosition.rotation.y, correctPosition.rotation.z, correctPosition.rotation.w);
                 other.GetComponent<Rigidbody>().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
                 Debug.Log("PAD1 is ok");
                 PADNumber++;
                 Debug.Log("PADNumber = " + PADNumber);
